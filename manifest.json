@@ -1,5 +1,5 @@
 {
-  "name": "TodoList App",
+  "name": "TodoList Application",
   "version": "1.0",
   "description": "A powerful todolist application for chrome",
   "permissions": ["storage"],

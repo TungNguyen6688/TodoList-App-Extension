@@ -44,6 +44,7 @@
   width: calc(100% - 41px);
   height: 40px;
   padding-left: 10px;
+  line-height: 16px;
 }
 
 .task:hover {
@@ -143,4 +144,21 @@
   transform: rotate(90deg);
   top: 6px;
   right: 1px;
+}
+
+.header{
+  border-bottom: 1px solid #5f6368;
+  padding: 10px 7px;
+  background: #59B883;
+}
+
+.header h1{
+  font-size: 20px;
+  color: #000;
+  display: inline-block;
+  margin: 0;
+}
+
+.header .syncStatus{
+  display: inline-block;
 }

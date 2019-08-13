@@ -22,13 +22,17 @@
 
 <body>
     <div id="app">
-        <div>
-            {{message}}
+        <div class="header d-flex justify-content-between align-items-ceneter">
+            <h1>TodoList Application</h1>
+            <div class="syncStatus">
+                <span v-if="syncStatus == 'syncing'">Syncing</span>
+                <span v-else-if="syncStatus == 'syncCompleted'">Sync completed</span>
+            </div>
         </div>
         <div id="tasks">
             <div class="task">
                 <span class="addSign"></span>
-                <input type="text" v-model="newTask" v-on:keyup.enter = "addTask" placeholder="Add a Task">
+                <input type="text" v-model="newTask" v-on:keyup.enter="addTask" placeholder="Add a Task">
             </div>
             <div class="task" :class="{completed: task.completed}" v-for="task in tasks">
                 <span class="checkbox" @click="task.completed  =! task.completed"></span>
