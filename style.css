@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#app {
+  border-radius: 20px;
+  width: 400px;
+  height: auto;
+}
+
+.task {
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.task input {
+  border: none;
+  font-size: 17px;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  background: transparent;
+  width: calc(100% - 41px);
+  height: 40px;
+  padding-left: 10px;
+}
+
+.task:hover {
+  background: #ebebeb;
+}
+
+.task:hover .deleteBtn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.task span.checkbox {
+  display: inline-block;
+  border: 1px solid #5f6368;
+  width: 16px;
+  height: 16px;
+}
+
+.task .deleteBtn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.task .deleteBtn:before,
+.task .deleteBtn:after {
+  content: "";
+  width: 16px;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  background: #5f6368;
+}
+
+.task .deleteBtn:before {
+  transform: rotate(-45deg);
+  top: 6px;
+  left: -1px;
+}
+
+.task .deleteBtn:after {
+  transform: rotate(45deg);
+  top: 6px;
+  right: 1px;
+}
+
+.task.completed .checkbox {
+  position: relative;
+}
+
+.task.completed .checkbox:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 2px;
+  left: 0;
+  width: 14px;
+  height: 6px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+.task.completed input {
+  text-decoration: line-through;
+  color: #5f6368;
+}
+
+.task .addSign {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.task .addSign:before,
+.task .addSign:after {
+  content: "";
+  width: 16px;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  background: #5f6368;
+}
+
+.task .addSign:before {
+  top: 6px;
+  left: -1px;
+}
+
+.task .addSign:after {
+  transform: rotate(90deg);
+  top: 6px;
+  right: 1px;
+}
